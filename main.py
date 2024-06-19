@@ -2,7 +2,6 @@ from data_service_cassandra import get_raw_data, put_3pl_result_data
 from spark_connection import connect_spark
 from preprocessing_data import distributed_processing
 from validation import check_spark_session, check_data_count, check_distributed_processing, check_error_code
-import installation_library
 from util import set_logging
 
 
@@ -40,9 +39,6 @@ def run_model() -> dict:
 
 
 if __name__ == "__main__":
-    # install library
-    installation_library.install()
-
     # config logging
     set_logging()
 
